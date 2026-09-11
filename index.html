@@ -1,0 +1,558 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퇴직금 계산기 | 2026년 퇴직연금 DC·DB 비교 모의계산</title>
+  <meta name="description" content="입사일과 퇴사일, 월급여를 입력하면 1일 평균임금과 법정 퇴직금, 퇴직연금 DB·DC 실수령액을 즉시 계산합니다.">
+  <meta name="keywords" content="퇴직금 계산기, 퇴직금 모의계산, 퇴직연금 계산기, DB형 DC형 차이, 퇴직금 지급기준, 평균임금 계산법">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://severance.enjoy-onepage.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:url" content="https://severance.enjoy-onepage.com/">
+  <meta property="og:site_name" content="퇴직금 계산기">
+  <meta property="og:title" content="퇴직금 계산기 | 2026년 퇴직연금 DC·DB 비교 모의계산">
+  <meta property="og:description" content="입사일과 퇴사일, 월급여를 입력하면 1일 평균임금과 법정 퇴직금, 퇴직연금 DB·DC 실수령액을 즉시 계산합니다.">
+  <meta property="og:image" content="https://severance.enjoy-onepage.com/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="퇴직금 계산기 | 2026년 퇴직연금 DC·DB 비교 모의계산">
+  <meta name="twitter:description" content="입사일과 퇴사일, 월급여를 입력하면 1일 평균임금과 법정 퇴직금, 퇴직연금 DB·DC 실수령액을 즉시 계산합니다.">
+  <meta name="twitter:image" content="https://severance.enjoy-onepage.com/og-image.png">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/icon.png">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421332766487920" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://severance.enjoy-onepage.com/#webapp",
+        "name": "퇴직금 계산기",
+        "url": "https://severance.enjoy-onepage.com/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "근로자퇴직급여보장법에 따른 법정 퇴직금 및 퇴직연금(DB/DC) 수익률 비교 시뮬레이션을 제공하는 금융 모의계산기입니다.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://severance.enjoy-onepage.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "퇴직금 지급 기준은 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "근로자퇴직급여보장법상 4주간을 평균하여 1주 소정근로시간이 15시간 이상이고, 1년 이상 계속 근로한 근로자라면 정규직, 계약직, 아르바이트 관계없이 모두 퇴직금을 받을 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "퇴직연금 DB형과 DC형의 차이는 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DB형(확정급여형)은 퇴직 직전 3개월 평균임금을 기준으로 법정 퇴직금과 동일하게 회사가 보장하는 방식입니다. DC형(확정기여형)은 매년 연봉의 1/12을 근로자 개인 계좌에 입금하고 근로자가 직접 ETF, 예금 등으로 운용하여 수익률에 따라 최종 퇴직금이 달라집니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold text-lg hover:text-blue-600 transition">
+        <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-black text-sm shadow-sm">퇴직</span>
+        <span>퇴직금·퇴직연금 계산기</span>
+      </a>
+      <nav class="flex items-center gap-4 text-sm font-medium text-slate-600">
+        <a href="/about.html" class="hover:text-emerald-600 transition">산정 기준</a>
+        <a href="/guides/dc-vs-db.html" class="hidden sm:inline hover:text-emerald-600 transition">DB vs DC</a>
+        <a href="/privacy.html" class="hover:text-emerald-600 transition">개인정보처리방침</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="max-w-4xl mx-auto px-4 pt-6 pb-4 w-full">
+    <div class="text-center md:text-left md:flex md:items-center md:justify-between border-b border-slate-200 pb-5">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 mb-2">
+          <span>근로자퇴직급여보장법 공식 기준</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          내 예상 퇴직금 & 퇴직연금 모의계산
+        </h1>
+        <p class="text-slate-600 text-sm mt-1">
+          입사일과 퇴사일, 최근 3개월 급여를 입력하면 법정 퇴직금과 DB·DC 연금 비교 결과를 즉시 계산합니다.
+        </p>
+      </div>
+      <div class="mt-4 md:mt-0 flex gap-2 justify-center">
+        <button id="shareBtn" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg border border-emerald-200 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+          공유하기
+        </button>
+        <button id="copyUrlBtn" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg border border-slate-200 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          링크 복사
+        </button>
+      </div>
+    </div>
+  </section>
+  <main class="max-w-4xl mx-auto px-4 py-4 w-full flex-grow">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- Input Panel (5 cols) -->
+      <section class="lg:col-span-5 bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
+        <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-2 h-4 bg-emerald-600 rounded-full"></span>
+          근무 기간 및 임금 정보
+        </h2>
+
+        <!-- 입사일 / 퇴사일 -->
+        <div class="grid grid-cols-2 gap-3 mb-4">
+          <div>
+            <label for="startDate" class="block text-xs font-bold text-slate-700 mb-1">입사일자</label>
+            <input type="date" id="startDate" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-2.5 py-2 text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          </div>
+          <div>
+            <label for="endDate" class="block text-xs font-bold text-slate-700 mb-1">퇴사일자(마지막근무일)</label>
+            <input type="date" id="endDate" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-2.5 py-2 text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          </div>
+        </div>
+
+        <div id="serviceDaysNotice" class="p-2.5 bg-emerald-50 rounded-xl border border-emerald-200 text-[11px] text-emerald-800 mb-4 flex justify-between items-center font-medium">
+          <span>총 재직일수:</span>
+          <span id="serviceDaysText" class="font-bold text-xs">1,095일 (3년 0개월)</span>
+        </div>
+
+        <!-- 월 기본급 (최근 3개월 월평균) -->
+        <div class="mb-4">
+          <div class="flex justify-between items-center mb-1.5">
+            <label for="baseMonthlySalary" class="text-xs font-bold text-slate-700">월 기본급 (세전)</label>
+            <span id="salaryFormatted" class="text-xs font-semibold text-emerald-600">3,500,000원</span>
+          </div>
+          <div class="relative">
+            <input type="number" id="baseMonthlySalary" step="10000" min="500000" max="50000000" value="3500000" class="w-full text-right pr-8 pl-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-base">
+            <span class="absolute right-3 top-3 text-xs font-bold text-slate-500 pointer-events-none">원</span>
+          </div>
+
+          <!-- Quick Buttons -->
+          <div class="grid grid-cols-4 gap-1.5 mt-2">
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="2500000">250만</button>
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="3500000">350만</button>
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="5000000">500만</button>
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="7000000">700만</button>
+          </div>
+          <div class="grid grid-cols-3 gap-1.5 mt-1.5">
+            <button type="button" class="quick-add text-[11px] py-1 bg-emerald-50 hover:bg-emerald-100 rounded-md font-medium text-emerald-700 transition" data-add="100000">+10만</button>
+            <button type="button" class="quick-add text-[11px] py-1 bg-emerald-50 hover:bg-emerald-100 rounded-md font-medium text-emerald-700 transition" data-add="500000">+50만</button>
+            <button type="button" class="quick-add text-[11px] py-1 bg-emerald-50 hover:bg-emerald-100 rounded-md font-medium text-emerald-700 transition" data-add="1000000">+100만</button>
+          </div>
+        </div>
+
+        <!-- 연간 상여금 총액 -->
+        <div class="mb-4">
+          <label for="annualBonus" class="block text-xs font-bold text-slate-700 mb-1">최근 1년간 상여금 총액 (선택)</label>
+          <div class="relative">
+            <input type="number" id="annualBonus" step="10000" min="0" value="0" class="w-full text-right pr-8 pl-3 py-2 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-xs">
+            <span class="absolute right-3 top-2 text-xs font-bold text-slate-500 pointer-events-none">원</span>
+          </div>
+          <span class="text-[10px] text-slate-400 mt-0.5 block">* 3/12에 해당하는 금액이 평균임금에 자동 합산됩니다.</span>
+        </div>
+
+        <!-- 연차수당 총액 -->
+        <div class="mb-4">
+          <label for="annualLeavePay" class="block text-xs font-bold text-slate-700 mb-1">최근 1년간 연차수당 총액 (선택)</label>
+          <div class="relative">
+            <input type="number" id="annualLeavePay" step="10000" min="0" value="0" class="w-full text-right pr-8 pl-3 py-2 bg-slate-50 border border-slate-300 rounded-xl font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-xs">
+            <span class="absolute right-3 top-2 text-xs font-bold text-slate-500 pointer-events-none">원</span>
+          </div>
+          <span class="text-[10px] text-slate-400 mt-0.5 block">* 퇴직 전 미사용 연차수당의 3/12가 반영됩니다.</span>
+        </div>
+      </section>
+
+      <!-- Results Panel (7 cols) -->
+      <section class="lg:col-span-7 space-y-4">
+        
+        <!-- Summary Cards -->
+        <div class="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl p-5 text-white shadow-lg relative overflow-hidden">
+          <div class="relative z-10">
+            <div class="flex items-center justify-between">
+              <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white/20 text-white backdrop-blur-sm">법정 퇴직금 예상액</span>
+              <span id="tenureBadge" class="text-xs text-emerald-100 font-medium">재직 3년 기준</span>
+            </div>
+
+            <div class="mt-4">
+              <div class="text-xs text-emerald-200 font-medium">세전 법정 퇴직금 합계</div>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span id="resSeveranceTotal" class="text-3xl sm:text-4xl font-black tracking-tight">10,500,000</span>
+                <span class="text-lg font-bold text-emerald-100">원</span>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-white/20 grid grid-cols-2 gap-3">
+              <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                <div class="text-[11px] text-emerald-200 font-medium">1일 평균임금</div>
+                <div class="text-base font-bold text-amber-300 mt-0.5" id="resAvgDailyWage">114,130원</div>
+              </div>
+              <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                <div class="text-[11px] text-emerald-200 font-medium">1일 통상임금(기준)</div>
+                <div class="text-base font-bold text-emerald-200 mt-0.5" id="resNormalDailyWage">116,666원</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 퇴직연금 DB vs DC 수익률 비교 카드 -->
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">퇴직연금 DB형 vs DC형 수익률 비교</h3>
+            <span class="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded">복리 기준</span>
+          </div>
+
+          <div class="space-y-2.5 text-xs">
+            <div class="flex justify-between items-center p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+              <div>
+                <div class="font-bold text-slate-800">DB형 (확정급여형)</div>
+                <div class="text-[10px] text-slate-400">퇴직 시점 평균임금 보장</div>
+              </div>
+              <div class="text-right">
+                <div class="font-black text-slate-900 text-sm" id="resDbTotal">10,500,000원</div>
+                <div class="text-[10px] text-emerald-600 font-semibold">원금 100% 보장</div>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center p-2.5 bg-emerald-50/60 rounded-xl border border-emerald-100">
+              <div>
+                <div class="font-bold text-emerald-900">DC형 (연 4% 운용 시)</div>
+                <div class="text-[10px] text-emerald-600">안정형 펀드/채권 운용</div>
+              </div>
+              <div class="text-right">
+                <div class="font-black text-emerald-700 text-sm" id="resDc4Total">10,920,000원</div>
+                <div class="text-[10px] text-emerald-600 font-bold" id="resDc4Diff">+420,000원</div>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center p-2.5 bg-blue-50/60 rounded-xl border border-blue-100">
+              <div>
+                <div class="font-bold text-blue-900">DC형 (연 7% 운용 시)</div>
+                <div class="text-[10px] text-blue-600">적극형 ETF/주식형 운용</div>
+              </div>
+              <div class="text-right">
+                <div class="font-black text-blue-700 text-sm" id="resDc7Total">11,250,000원</div>
+                <div class="text-[10px] text-blue-600 font-bold" id="resDc7Diff">+750,000원</div>
+              </div>
+            </div>
+          </div>
+          <p class="text-[10px] text-slate-400 mt-2">* 임금인상률이 운용수익률보다 높으면 DB형이, 운용수익률이 더 높으면 DC형이 유리합니다.</p>
+        </div>
+
+        <!-- Google AdSense Unit 1 (In-Result Slot) -->
+        <div class="bg-slate-100 rounded-xl p-2 border border-slate-200 text-center my-4 overflow-hidden">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-6421332766487920"
+               data-ad-slot="3824727725"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Deep-Dive Guides Section (전문 서브페이지 링크) -->
+    <section class="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+      <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+        <span class="w-2 h-4 bg-emerald-600 rounded-full"></span>
+        퇴직금 및 퇴직연금 핵심 실무 가이드
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="/guides/severance-pay-calc.html" class="block p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 transition group">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-700 mb-2">법정 기준</span>
+          <h4 class="font-bold text-sm text-slate-900 group-hover:text-emerald-600 transition">2026 퇴직금 계산법과 평균임금 산정</h4>
+          <p class="text-xs text-slate-500 mt-1">상여금과 연차수당 3/12 반영 원칙 및 통상임금 비교 팁</p>
+        </a>
+        <a href="/guides/dc-vs-db.html" class="block p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 transition group">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-700 mb-2">연금 유형</span>
+          <h4 class="font-bold text-sm text-slate-900 group-hover:text-emerald-600 transition">퇴직연금 DB형 vs DC형 선택 가이드</h4>
+          <p class="text-xs text-slate-500 mt-1">임금상승률과 본인의 투자 성향에 따른 완벽 유불리 비교</p>
+        </a>
+        <a href="/guides/irp-tax-saving.html" class="block p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 transition group">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-700 mb-2">절세 전략</span>
+          <h4 class="font-bold text-sm text-slate-900 group-hover:text-emerald-600 transition">IRP 계좌 퇴직소득세 30% 감면 비법</h4>
+          <p class="text-xs text-slate-500 mt-1">일시금 대신 연금 수령 시 세금 아끼는 실전 절세 노하우</p>
+        </a>
+      </div>
+    </section>
+    <!-- FAQ Accordion -->
+    <section class="mt-6 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+      <h3 class="text-base font-bold text-slate-900 mb-4">자주 묻는 질문 (FAQ)</h3>
+      <div class="space-y-3">
+        <details class="group border border-slate-200 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-slate-800">
+            <span>수습기간이나 아르바이트 기간도 퇴직금 근속일수에 포함되나요?</span>
+            <span class="transition group-open:rotate-180">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </span>
+          </summary>
+          <p class="mt-2 text-xs text-slate-600 leading-relaxed">
+            네, 수습기간, 인턴기간, 아르바이트 기간이라도 동일 사업장에서 계속 근로 관계가 단절 없이 이어졌다면 최초 입사일부터 기산하여 퇴직금 산정 기간에 모두 포함됩니다.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-slate-800">
+            <span>퇴직금 산정 시 상여금과 미사용 연차수당은 어떻게 반영되나요?</span>
+            <span class="transition group-open:rotate-180">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </span>
+          </summary>
+          <p class="mt-2 text-xs text-slate-600 leading-relaxed">
+            퇴직일 이전 1년간 지급받은 정기 상여금 전액의 3/12(3개월분)와, 퇴직으로 인해 비로소 발생한 것이 아닌 전년도 출근율로 이미 발생하여 미사용된 연차수당의 3/12가 3개월 임금총액에 합산됩니다.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-slate-800">
+            <span>퇴직금은 언제까지 지급받아야 하나요?</span>
+            <span class="transition group-open:rotate-180">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </span>
+          </summary>
+          <p class="mt-2 text-xs text-slate-600 leading-relaxed">
+            근로기준법 및 근로자퇴직급여보장법에 따라 퇴직일(마지막 근무일 다음 날)로부터 14일 이내에 전액 지급되어야 합니다. 당사자 간 합의로 기일을 연장할 수 있으나, 지연 시 연 20%의 지연이자가 발생합니다.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Google AdSense Unit 2 (Bottom Slot) -->
+    <div class="bg-slate-100 rounded-xl p-2 border border-slate-200 text-center my-6 overflow-hidden">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-6421332766487920"
+           data-ad-slot="3416334507"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 mt-12 py-8 text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <span class="font-bold text-slate-800 text-sm">퇴직금·퇴직연금 계산기</span>
+          <p class="mt-1 text-slate-500 text-[11px]">입력하신 급여 데이터는 브라우저 내부에서만 처리되며 서버로 전송되지 않습니다.</p>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-medium">
+          <a href="/about.html" class="hover:text-emerald-600 transition">산정 공식 및 안내</a>
+          <a href="/privacy.html" class="hover:text-emerald-600 transition">개인정보처리방침</a>
+          <a href="/sitemap.xml" class="hover:text-emerald-600 transition">사이트맵</a>
+        </div>
+      </div>
+      <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-2">
+        <span>© 2026 Enjoy Onepage. All rights reserved. 본 시뮬레이션은 참고용이며 정확한 퇴직금은 회사 규정에 따릅니다.</span>
+        <span>기준: 고용노동부 근로기준법 및 근로자퇴직급여보장법</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-4 py-2.5 rounded-xl shadow-xl transition-opacity duration-300 opacity-0 pointer-events-none z-50">
+    알림 메시지
+  </div>
+
+  <script>
+    (function() {
+      const startDateInput = document.getElementById('startDate');
+      const endDateInput = document.getElementById('endDate');
+      const salaryInput = document.getElementById('baseMonthlySalary');
+      const salaryFormatted = document.getElementById('salaryFormatted');
+      const bonusInput = document.getElementById('annualBonus');
+      const leaveInput = document.getElementById('annualLeavePay');
+      
+      const serviceDaysText = document.getElementById('serviceDaysText');
+      const tenureBadge = document.getElementById('tenureBadge');
+      const resSeveranceTotal = document.getElementById('resSeveranceTotal');
+      const resAvgDailyWage = document.getElementById('resAvgDailyWage');
+      const resNormalDailyWage = document.getElementById('resNormalDailyWage');
+      
+      const resDbTotal = document.getElementById('resDbTotal');
+      const resDc4Total = document.getElementById('resDc4Total');
+      const resDc4Diff = document.getElementById('resDc4Diff');
+      const resDc7Total = document.getElementById('resDc7Total');
+      const resDc7Diff = document.getElementById('resDc7Diff');
+
+      const shareBtn = document.getElementById('shareBtn');
+      const copyUrlBtn = document.getElementById('copyUrlBtn');
+      const toast = document.getElementById('toast');
+
+      // Set default dates: 3 years ago to today
+      const today = new Date();
+      const threeYearsAgo = new Date();
+      threeYearsAgo.setFullYear(today.getFullYear() - 3);
+
+      function formatDate(d) {
+        return d.toISOString().split('T')[0];
+      }
+
+      startDateInput.value = formatDate(threeYearsAgo);
+      endDateInput.value = formatDate(today);
+
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100');
+          toast.classList.add('opacity-0');
+        }, 2200);
+      }
+
+      function formatNumber(num) {
+        return Math.round(num).toLocaleString('ko-KR');
+      }
+
+      function calculate() {
+        const start = new Date(startDateInput.value);
+        const end = new Date(endDateInput.value);
+        
+        let diffTime = end - start;
+        let days = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
+        if (isNaN(days) || days < 0) days = 0;
+
+        const years = (days / 365.25).toFixed(1);
+        serviceDaysText.textContent = `${formatNumber(days)}일 (약 ${years}년)`;
+        tenureBadge.textContent = `재직 약 ${years}년 기준`;
+
+        const monthlySalary = parseFloat(salaryInput.value) || 0;
+        const annualBonus = parseFloat(bonusInput.value) || 0;
+        const annualLeave = parseFloat(leaveInput.value) || 0;
+
+        salaryFormatted.textContent = `${formatNumber(monthlySalary)}원`;
+
+        // 3 months salary total (approx 91.25 days)
+        const daysIn3Months = 91.25;
+        const total3MonthsSalary = (monthlySalary * 3) + (annualBonus * 0.25) + (annualLeave * 0.25);
+        let avgDailyWage = total3MonthsSalary / daysIn3Months;
+
+        // Normal wage check: baseMonthlySalary / 209 * 8
+        const normalDailyWage = (monthlySalary / 209) * 8;
+        if (avgDailyWage < normalDailyWage) {
+          avgDailyWage = normalDailyWage;
+        }
+
+        // Severance Pay = avgDailyWage * 30 * (days / 365)
+        let severance = 0;
+        if (days >= 365) {
+          severance = avgDailyWage * 30 * (days / 365);
+        }
+
+        resSeveranceTotal.textContent = formatNumber(severance);
+        resAvgDailyWage.textContent = `${formatNumber(avgDailyWage)}원`;
+        resNormalDailyWage.textContent = `${formatNumber(normalDailyWage)}원`;
+
+        // DB vs DC Comparison
+        // DB = severance
+        resDbTotal.textContent = `${formatNumber(severance)}원`;
+
+        // DC compound simulation: annual contribution = monthlySalary
+        // Approx DC value with 4% and 7% annual returns
+        const yNum = days / 365.25;
+        let dc4 = severance * Math.pow(1.04, yNum * 0.5); // mid-point compounding
+        let dc7 = severance * Math.pow(1.07, yNum * 0.5);
+
+        const diff4 = dc4 - severance;
+        const diff7 = dc7 - severance;
+
+        resDc4Total.textContent = `${formatNumber(dc4)}원`;
+        resDc4Diff.textContent = `${diff4 >= 0 ? '+' : ''}${formatNumber(diff4)}원`;
+        resDc7Total.textContent = `${formatNumber(dc7)}원`;
+        resDc7Diff.textContent = `${diff7 >= 0 ? '+' : ''}${formatNumber(diff7)}원`;
+
+        // URL query sync
+        const params = new URLSearchParams();
+        params.set('salary', monthlySalary);
+        params.set('start', startDateInput.value);
+        params.set('end', endDateInput.value);
+        if (annualBonus > 0) params.set('bonus', annualBonus);
+        if (annualLeave > 0) params.set('leave', annualLeave);
+        window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
+      }
+
+      startDateInput.addEventListener('change', calculate);
+      endDateInput.addEventListener('change', calculate);
+      salaryInput.addEventListener('input', calculate);
+      bonusInput.addEventListener('input', calculate);
+      leaveInput.addEventListener('input', calculate);
+
+      document.querySelectorAll('.quick-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          salaryInput.value = btn.dataset.amount;
+          calculate();
+        });
+      });
+
+      document.querySelectorAll('.quick-add').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const current = parseFloat(salaryInput.value) || 0;
+          salaryInput.value = current + parseFloat(btn.dataset.add);
+          calculate();
+        });
+      });
+
+      shareBtn.addEventListener('click', async () => {
+        const shareData = {
+          title: '퇴직금 계산기 모의계산 결과',
+          text: '내 예상 법정 퇴직금과 퇴직연금(DB/DC) 수익률 비교 결과를 확인해보세요.',
+          url: window.location.href
+        };
+        if (navigator.share) {
+          try { await navigator.share(shareData); } catch (e) {}
+        } else {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('공유 링크가 복사되었습니다.');
+          });
+        }
+      });
+
+      copyUrlBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast('계산 결과 링크가 복사되었습니다.');
+        });
+      });
+
+      function initFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('salary')) salaryInput.value = params.get('salary');
+        if (params.has('start')) startDateInput.value = params.get('start');
+        if (params.has('end')) endDateInput.value = params.get('end');
+        if (params.has('bonus')) bonusInput.value = params.get('bonus');
+        if (params.has('leave')) leaveInput.value = params.get('leave');
+        calculate();
+      }
+
+      initFromUrl();
+    })();
+  </script>
+</body>
+</html>
