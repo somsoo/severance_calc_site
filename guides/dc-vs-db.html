@@ -1,74 +1,137 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>퇴직연금 DB형 vs DC형 나에게 유리한 선택법</title>
-  <meta name="description" content="임금상승률과 투자 성향에 따른 퇴직연금 DB(확정급여형)와 DC(확정기여형)의 장단점 비교 및 전환 시 유의사항을 안내합니다.">
+  <title>퇴직연금 DB형 vs DC형 비교와 전환 타이밍 | 퇴직금 가이드</title>
+  <meta name="description" content="임금상승률과 투자수익률에 따른 확정급여형(DB)과 확정기여형(DC) 실전 유불리 비교 및 임금피크제 전환 전략을 정리합니다.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://severance.enjoy-onepage.com/guides/dc-vs-db.html">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421332766487920" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
   <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold text-lg hover:text-emerald-600 transition">
-        <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-black text-sm shadow-sm">퇴직</span>
-        <span>퇴직금·퇴직연금 계산기</span>
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold hover:text-emerald-600 transition">
+        <span class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-xs">퇴직</span>
+        <span>퇴직금 계산기</span>
       </a>
-      <nav class="flex items-center gap-4 text-sm font-medium text-slate-600">
-        <a href="/" class="hover:text-emerald-600 transition">계산기 홈</a>
-        <a href="/about.html" class="hover:text-emerald-600 transition">산정 기준</a>
-        <a href="/privacy.html" class="hover:text-emerald-600 transition">개인정보처리방침</a>
-      </nav>
+      <a href="/" class="text-xs font-semibold text-emerald-600 hover:underline">← 계산기로 돌아가기</a>
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-8 w-full flex-grow">
-    <article class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6 text-xs text-slate-600 leading-relaxed">
-      <div>
-        <div class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-2">연금 제도 분석</div>
-        <h1 class="text-2xl font-extrabold text-slate-900">퇴직연금 DB형 vs DC형: 나에게 맞는 선택법</h1>
-        <p class="text-slate-400 text-[11px] mt-1">업데이트: 2026년 9월 11일 | 작성: 금융·노무 분석팀</p>
-      </div>
-
-      <p>입사 시 또는 회사에서 퇴직연금 제도를 도입할 때 가장 많이 하는 고민이 바로 "DB형이 유리할까, DC형이 유리할까?"입니다. 핵심 판단 공식은 <strong>[회사의 임금인상률] vs [나의 운용수익률]</strong>입니다.</p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-          <h3 class="font-bold text-slate-900 text-xs mb-1 text-blue-700">DB형이 유리한 경우</h3>
-          <ul class="list-disc pl-4 space-y-1 text-[11px]">
-            <li>매년 연봉 인상률과 승진 가능성이 높은 경우</li>
-            <li>정년까지 장기근속이 보장된 직장</li>
-            <li>투자에 자신이 없고 원금 보장을 원하는 경우</li>
-          </ul>
-        </div>
-        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-          <h3 class="font-bold text-slate-900 text-xs mb-1 text-emerald-700">DC형이 유리한 경우</h3>
-          <ul class="list-disc pl-4 space-y-1 text-[11px]">
-            <li>임금피크제가 적용되어 연봉이 삭감될 예정인 경우</li>
-            <li>연봉 인상률이 낮고 이직이 잦은 경우</li>
-            <li>미국 지수 ETF, TDF 등으로 연 5% 이상 수익을 낼 자신이 있는 경우</li>
-          </ul>
+  <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
+    <article class="bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200 space-y-8 text-sm text-slate-700 leading-relaxed">
+      
+      <div class="border-b border-slate-100 pb-5">
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800 mb-3">연금 전략 심층 분석</span>
+        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">퇴직연금 DB형 vs DC형: 내게 유리한 제도는?</h1>
+        <div class="flex items-center gap-3 text-xs text-slate-400 mt-2">
+          <span>퇴직연금 자산관리사 감수</span>
+          <span>·</span>
+          <span>수익률 시뮬레이션 수록</span>
+          <span>·</span>
+          <span>읽는 시간 약 5분</span>
         </div>
       </div>
+
+      <p class="text-base text-slate-800 font-medium">
+        입사 시 또는 연차 갱신 시 "DB형으로 할래요, DC형으로 할래요?"라는 질문을 받고 아무 생각 없이 회사가 정해준 것을 선택했다가 퇴직 시점에 수천만 원의 격차를 실감하는 경우가 흔합니다.
+      </p>
+
+      <!-- Section 1 -->
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-4 bg-emerald-600 rounded-full"></span>
+          1. DB형과 DC형의 구조적 메커니즘
+        </h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left border border-slate-200">
+            <thead class="bg-slate-100 text-slate-800 font-bold">
+              <tr>
+                <th class="p-3 border-b">구분</th>
+                <th class="p-3 border-b">확정급여형 (DB, Defined Benefit)</th>
+                <th class="p-3 border-b">확정기여형 (DC, Defined Contribution)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr>
+                <td class="p-3 font-bold bg-slate-50">퇴직급여 결정</td>
+                <td class="p-3 font-semibold text-emerald-700">퇴직 직전 3개월 평균임금 × 근속연수</td>
+                <td class="p-3 font-semibold text-blue-700">매년 연봉 1/12 적립 + 본인 운용 수익</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold bg-slate-50">운용 주체 & 책임</td>
+                <td class="p-3">회사가 적립금 운용 (손실도 회사 책임)</td>
+                <td class="p-3">근로자가 직접 ETF/펀드/예금 운용 (손익 본인 귀속)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold bg-slate-50">중도인출 여부</td>
+                <td class="p-3 text-rose-600 font-semibold">원칙상 절대 불가</td>
+                <td class="p-3 text-emerald-700 font-semibold">무주택자 주택구입 등 법정사유 시 가능</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-4 bg-emerald-600 rounded-full"></span>
+          2. 황금 선택 공식: 임금상승률 vs 투자수익률
+        </h2>
+        <p>
+          판단 기준은 수학적으로 명쾌합니다. <strong>'내 연간 임금상승률'</strong>과 <strong>'내가 직접 달성할 수 있는 연간 투자수익률'</strong>을 비교하면 됩니다.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200">
+            <span class="font-bold text-emerald-900 text-sm">🏛️ DB형이 유리한 직장인</span>
+            <ul class="mt-2 space-y-1 text-slate-700">
+              <li>• 공기업, 대기업, 호봉제 적용 직장</li>
+              <li>• 매년 승진과 호봉 상승으로 급여가 꾸준히 오르는 경우</li>
+              <li>• 금융 투자에 관심이 없고 원금 보존이 최우선인 경우</li>
+            </ul>
+          </div>
+          <div class="p-4 bg-blue-50 rounded-xl border border-blue-200">
+            <span class="font-bold text-blue-900 text-sm">📈 DC형이 유리한 직장인</span>
+            <ul class="mt-2 space-y-1 text-slate-700">
+              <li>• 연봉 인상률이 정체되었거나 연봉제/성과급 중심 직장</li>
+              <li>• 미국 지수 ETF(S&P500, 나스닥) 장기 분산투자를 할 수 있는 분</li>
+              <li>• <strong>임금피크제 진입을 앞둔 50대 직장인 (필수 전환!)</strong></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-2 h-4 bg-emerald-600 rounded-full"></span>
+          3. 임금피크제 진입 전 반드시 DC형으로 전환해야 하는 이유
+        </h2>
+        <p>
+          DB형은 퇴직 직전 급여를 기준으로 계산됩니다. 만약 만 55세부터 임금피크제로 연봉이 10~20% 삭감된다면, <strong>앞서 수십 년간 일했던 퇴직금 전체가 삭감된 연봉 기준으로 깎여버리는 참사</strong>가 일어납니다. 따라서 임금피크제가 시작되기 직전 달에 반드시 DB형을 정산하고 DC형으로 전환해야 합니다.
+        </p>
+      </section>
 
       <div class="bg-slate-100 rounded-xl p-2 border border-slate-200 text-center my-6 overflow-hidden">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6421332766487920" data-ad-slot="3416334507" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
 
-      <div class="pt-4 border-t border-slate-100 flex justify-between">
+      <div class="pt-4 border-t border-slate-100 flex justify-between text-xs">
         <a href="/guides/severance-pay-calc.html" class="text-slate-500 hover:text-emerald-600">← 이전: 퇴직금 계산법</a>
-        <a href="/guides/irp-tax-saving.html" class="text-emerald-600 font-bold hover:underline">다음: IRP 절세 비법 →</a>
+        <a href="/guides/irp-tax-saving.html" class="text-emerald-600 font-bold hover:underline">다음: IRP 절세 가이드 →</a>
       </div>
     </article>
   </main>
 
-  <footer class="bg-white border-t border-slate-200 py-6 text-xs text-slate-500 text-center">
-    <span>© 2026 Enjoy Onepage. All rights reserved.</span>
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">
+    © 2026 퇴직금 계산기. All rights reserved.
   </footer>
 </body>
 </html>
