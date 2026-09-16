@@ -24,44 +24,57 @@
 <link href="/icon.png" rel="apple-touch-icon"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebApplication",
-        "@id": "https://severance.enjoy-onepage.com/#webapp",
-        "name": "퇴직금 계산기",
-        "url": "https://severance.enjoy-onepage.com/",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "All",
-        "browserRequirements": "Requires JavaScript. Requires HTML5.",
-        "description": "근로자퇴직급여보장법에 따른 법정 퇴직금 및 퇴직연금(DB/DC) 수익률 비교 시뮬레이션을 제공하는 금융 모의계산기입니다.",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://severance.enjoy-onepage.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "퇴직금 지급 기준은 무엇인가요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "근로자퇴직급여보장법상 4주간을 평균하여 1주 소정근로시간이 15시간 이상이고, 1년 이상 계속 근로한 근로자라면 정규직, 계약직, 아르바이트 관계없이 모두 퇴직금을 받을 수 있습니다."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "퇴직연금 DB형과 DC형의 차이는 무엇인가요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "DB형(확정급여형)은 퇴직 직전 3개월 평균임금을 기준으로 법정 퇴직금과 동일하게 회사가 보장하는 방식입니다. DC형(확정기여형)은 매년 연봉의 1/12을 근로자 개인 계좌에 입금하고 근로자가 직접 ETF, 예금 등으로 운용하여 수익률에 따라 최종 퇴직금이 달라집니다."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://severance.enjoy-onepage.com/#webapp",
+      "name": "내 예상 퇴직금 & 퇴직연금 모의계산",
+      "url": "https://severance.enjoy-onepage.com/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "입사일과 퇴사일, 월급여를 입력하면 1일 평균임금과 법정 퇴직금, 퇴직연금 DB·DC 실수령액을 즉시 계산합니다.",
+      "image": "https://severance.enjoy-onepage.com/og-image.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://severance.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "내 예상 퇴직금 & 퇴직연금 모의계산 이용 시 비용이 발생하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "아닙니다. 내 예상 퇴직금 & 퇴직연금 모의계산는 회원가입이나 결제 없이 누구나 브라우저에서 100% 무료로 무제한 이용할 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "입력한 개인정보나 데이터가 서버에 저장되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "절대 저장되지 않습니다. 모든 연산과 데이터 처리는 사용자의 기기 브라우저 메모리 내에서만 로컬 연산되며 외부 서버로 전송되지 않습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "스마트폰 모바일 브라우저에서도 사용 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 아이폰(Safari), 안드로이드(Chrome, 삼성인터넷) 등 모든 모바일 기기 화면에 최적화된 반응형 웹앱으로 편리하게 이용하실 수 있습니다."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 <link href="https://severance.enjoy-onepage.com/rss.xml" rel="alternate" title="퇴직금 계산기 | 2026년 퇴직연금 DC·DB 비교 모의계산 RSS Feed" type="application/rss+xml"/>
 <link href="https://severance.enjoy-onepage.com/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
