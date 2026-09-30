@@ -5,7 +5,7 @@
     <link>https://severance.enjoy-onepage.com/</link>
     <description>입사일과 퇴사일, 월급여를 입력하면 1일 평균임금과 법정 퇴직금, 퇴직연금 DB·DC 실수령액을 즉시 계산합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 01 Oct 2026 03:12:25 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 03:39:35 +0900</lastBuildDate>
     <atom:link href="https://severance.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>퇴직금 계산기 | 퇴직연금 DC·DB 비교 모의계산</title>
@@ -13,13 +13,6 @@
       <guid isPermaLink="true">https://severance.enjoy-onepage.com/</guid>
       <description>입사일과 퇴사일, 월급여를 입력하면 1일 평균임금과 법정 퇴직금, 퇴직연금 DB·DC 실수령액을 즉시 계산합니다.</description>
       <pubDate>Sat, 12 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>퇴직금 및 퇴직연금 공식 산정 기준 | 서비스 소개</title>
-      <link>https://severance.enjoy-onepage.com/about.html</link>
-      <guid isPermaLink="true">https://severance.enjoy-onepage.com/about.html</guid>
-      <description>근로자퇴직급여보장법에 따른 1일 평균임금 산정 공식, 상여금과 연차수당 반영 기준, 퇴직연금 DB·DC 차이점을 안내합니다.</description>
-      <pubDate>Sat, 12 Sep 2026 01:00:00 +0900</pubDate>
     </item>
     <item>
       <title>개인정보처리방침 | 퇴직금 계산기</title>
