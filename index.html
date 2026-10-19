@@ -537,9 +537,9 @@
         serviceDaysText.textContent = `${formatNumber(days)}일 (약 ${years}년)`;
         tenureBadge.textContent = `재직 약 ${years}년 기준`;
 
-        const monthlySalary = parseFloat(salaryInput.value) || 0;
-        const annualBonus = parseFloat(bonusInput.value) || 0;
-        const annualLeave = parseFloat(leaveInput.value) || 0;
+        const monthlySalary = Math.max(0, parseFloat(salaryInput.value) || 0);
+        const annualBonus = Math.max(0, parseFloat(bonusInput.value) || 0);
+        const annualLeave = Math.max(0, parseFloat(leaveInput.value) || 0);
 
         salaryFormatted.textContent = `${formatNumber(monthlySalary)}원`;
 
@@ -607,7 +607,7 @@
 
       document.querySelectorAll('.quick-add').forEach(btn => {
         btn.addEventListener('click', () => {
-          const current = parseFloat(salaryInput.value) || 0;
+          const current = Math.max(0, parseFloat(salaryInput.value) || 0);
           salaryInput.value = current + parseFloat(btn.dataset.add);
           calculate();
         });
