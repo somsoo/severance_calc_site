@@ -7,6 +7,7 @@
 
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+  <!-- PAGE:HEAD START -->
   <title>퇴직금 계산기 | 2026년 퇴직연금 DB·DC 비교 모의계산</title>
   <meta content="입사일과 퇴사일, 월급여를 입력하면 1일 평균임금과 법정 퇴직금, 퇴직연금 DB·DC 실수령액을 즉시 계산하고 명세서 PNG로 저장합니다." name="description"/>
   <meta content="퇴직금 계산기, 퇴직금 모의계산, 퇴직연금 계산기, DB형 DC형 차이, 퇴직금 지급기준, 평균임금 계산법, 퇴직금 산정 명세서" name="keywords"/>
@@ -81,6 +82,7 @@
   </script>
   <link href="https://severance.enjoy-onepage.com/rss.xml" rel="alternate" title="퇴직금 계산기 | 2026년 퇴직연금 DC·DB 비교 모의계산 RSS Feed" type="application/rss+xml"/>
   <link href="https://severance.enjoy-onepage.com/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
+  <!-- PAGE:HEAD END -->
   <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script>
 
   <!-- Global Guards & Layout Shields -->
@@ -982,6 +984,138 @@
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
+
+    /* Remodel Styles: Extra Table, Checkpoints & Sublinks */
+    .extra-section {
+      margin: 24px auto;
+      max-width: 1040px;
+    }
+    .extra-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .extra-table {
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.74rem;
+    }
+    .extra-table th, .extra-table td {
+      white-space: normal;
+      line-height: 1.25;
+      padding: 6px 2px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      word-break: keep-all;
+    }
+    .extra-table th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: #1e293b;
+      font-size: 0.70rem;
+    }
+    .extra-table td.td-time {
+      font-weight: 600;
+      color: #0f172a;
+      background: #f8fafc;
+      font-size: 0.70rem;
+    }
+    .extra-table td.td-val {
+      color: #1e293b;
+      font-weight: 500;
+      font-size: 0.67rem;
+      letter-spacing: -0.02em;
+    }
+    .checkpoints-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      margin-top: 16px;
+    }
+    .checkpoints-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .checkpoint-item {
+      margin-bottom: 10px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: #334155;
+    }
+    .checkpoint-item:last-child {
+      margin-bottom: 0;
+    }
+    .checkpoint-item strong {
+      color: #0f172a;
+    }
+    .sublinks-section {
+      margin: 24px auto;
+      max-width: 1040px;
+    }
+    .sublinks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .sublinks-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .sublinks-card-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 8px;
+    }
+    .sublinks-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .sublink-item a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: #f8fafc;
+      border-radius: 8px;
+      color: #1e293b;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s;
+    }
+    .sublink-item a:hover {
+      background: #eff6ff;
+      border-color: #93c5fd;
+      color: #1d4ed8;
+    }
+    .sublink-item a span.arrow {
+      color: #64748b;
+      font-size: 0.8rem;
+    }
   </style>
 
   <script id="math-guard">
@@ -1029,6 +1163,7 @@
   <main class="main-wrap">
     <!-- Hero Section -->
     <section class="hero-section">
+      <!-- PAGE:HERO START -->
       <div class="hero-badge">
         <span>⚖️</span>
         <span>근로자퇴직급여보장법 공식 기준</span>
@@ -1037,6 +1172,7 @@
       <p class="hero-desc">
         입사일과 퇴사일, 최근 3개월 급여를 입력하면 1일 평균임금과 법정 퇴직금, DB·DC 퇴직연금 수익률 비교 결과를 즉시 산출하고 명세서 PNG로 저장합니다.
       </p>
+      <!-- PAGE:HERO END -->
     </section>
 
     <!-- Main Calculation Grid -->
@@ -1234,6 +1370,34 @@
       </section>
     </div>
 
+    <!-- PAGE:EXTRA START --><!-- PAGE:EXTRA END -->
+    <!-- PAGE:SUBLINKS START -->
+    <section class="sublinks-section">
+      <div class="sublinks-grid">
+        <div class="sublinks-card">
+          <div class="sublinks-card-title">📊 근속연수·월급 구간별 법정 퇴직금 &amp; DB·DC 비교표</div>
+          <ul class="sublinks-list">
+            <li class="sublink-item"><a href="/tenure-1year.html"><span>1년 근속 퇴직금 (365일 만근 기준)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/tenure-2years.html"><span>2년 근속 퇴직금 (730일 · DB/DC 비교)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/tenure-3years.html"><span>3년 근속 퇴직금 (월 350만 기준)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/tenure-5years.html"><span>5년 근속 퇴직금 (월 400만 기준)</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/tenure-10years.html"><span>10년 장기근속 퇴직금 &amp; 복리 비교</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/wage-250.html"><span>월급 250만 원 근속기간별 퇴직금표</span><span class="arrow">→</span></a></li>
+          </ul>
+        </div>
+        <div class="sublinks-card">
+          <div class="sublinks-card-title">📌 월급별 정산표 &amp; 상여금·연차수당·DB/DC 핵심 가이드</div>
+          <ul class="sublinks-list">
+            <li class="sublink-item"><a href="/wage-300.html"><span>월급 300만 원 근속연수별 퇴직금표</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/wage-400.html"><span>월급 400만 원 근속연수별 퇴직금표</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/guide-bonus-leave.html"><span>상여금·미사용 연차수당 3/12 산입 계산</span><span class="arrow">→</span></a></li>
+            <li class="sublink-item"><a href="/guide-db-vs-dc.html"><span>퇴직연금 DB형 vs DC형 유불리 전환 기준</span><span class="arrow">→</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- PAGE:SUBLINKS END -->
+
     <!-- Mid AdSense Banner (Slot 1186914926) -->
     <!-- ADSENSE START: mid -->
     <div class="ad-box ad-mid" style="max-width:1080px;margin:20px auto;text-align:center;">
@@ -1250,6 +1414,7 @@
     <!-- FAQ Accordion -->
     <section class="faq-section">
       <h2 class="faq-title">자주 묻는 질문 (FAQ)</h2>
+      <!-- PAGE:FAQ START -->
       <div class="faq-list">
         <details class="faq-item">
           <summary class="faq-question">
@@ -1279,6 +1444,7 @@
           </p>
         </details>
       </div>
+      <!-- PAGE:FAQ END -->
     </section>
 
     <!-- Related Utilities Section -->
@@ -1318,8 +1484,8 @@
         <div class="cluster-title">퇴직금·퇴직소득세 절세 가이드</div>
         <div class="cluster-desc">법정 퇴직금 산정 기준 및 IRP 연계 절세 혜택 총정리</div>
       </div>
-      <a class="cluster-btn" href="https://finance-kr.enjoy-onepage.com/2026/09/26/신용점수-산정-기준-변경/" target="_blank" rel="noopener noreferrer">
-        절세 리포트 읽기 →
+      <a class="cluster-btn" href="https://severance-tax-irp-calc.enjoy-onepage.com/" target="_blank" rel="noopener noreferrer">
+        퇴직소득세 &amp; IRP 연금 절세 계산기 바로가기 →
       </a>
     </div>
 
@@ -1391,8 +1557,8 @@
         return d.toISOString().split('T')[0];
       }
 
-      startDateInput.value = formatDate(threeYearsAgo);
-      endDateInput.value = formatDate(today);
+      if (!startDateInput.getAttribute('value')) startDateInput.value = formatDate(threeYearsAgo);
+      if (!endDateInput.getAttribute('value')) endDateInput.value = formatDate(today);
 
       const now = new Date();
       statementDate.textContent = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}.${String(now.getDate()).padStart(2, '0')}`;
