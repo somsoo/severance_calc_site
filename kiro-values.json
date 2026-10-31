@@ -1,0 +1,28 @@
+{
+ "app": "severance_calc_site",
+ "host": "severance.enjoy-onepage.com",
+ "watch": false,
+ "status": "unverified",
+ "checked": "",
+ "soft_days": 60,
+ "hard_days": 120,
+ "grace_days": 31,
+ "hide": [],
+ "pages": [
+  "guide-bonus-leave.html",
+  "guide-db-vs-dc.html",
+  "index.html",
+  "tenure-10years.html",
+  "tenure-1year.html",
+  "tenure-2years.html",
+  "tenure-3years.html",
+  "tenure-5years.html",
+  "wage-250.html",
+  "wage-300.html",
+  "wage-400.html"
+ ],
+ "values": {},
+ "sources": {},
+ "valid_until": "2026-12-31",
+ "note": "이 페이지의 금액·비율은 2026년 기준"
+}
